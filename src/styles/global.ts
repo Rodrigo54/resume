@@ -1,16 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  body {
-    line-height: 1;
-    font-size: 100%;
-    font-display: optional;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote,
   pre, a, abbr, acronym, address, big,
@@ -61,6 +51,17 @@ const GlobalStyles = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
 
+  body {
+    line-height: 1.3;
+    font-size: 12px;
+    font-display: optional;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -77,6 +78,37 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 5px;
     &:window-inactive {
       background: rgba(170,170,170,0.4);
+    }
+  }
+  @media print{
+    @page{
+      size: A4 portrait;
+      margin: 0cm;
+    }
+    *{
+      background: transparent !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    html, body {
+      font-size: 10pt;
+      margin:0;
+      padding:0;
+      display: contents;
+      h2,h3, blockquote { page-break-after: avoid; }
+      p, h2, h3, blockquote{
+        orphans: 3;
+        widows: 3;
+      }
+    }
+    #root, #root > div {
+      display: contents;
+      main {
+        margin: 0;
+        display: grid !important;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 `;
