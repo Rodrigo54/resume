@@ -51,9 +51,12 @@ const GlobalStyles = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
 
+  :root{
+    font-size: 16px;
+  }
+
   body {
     line-height: 1.3;
-    font-size: 12px;
     font-display: optional;
     font-family: -apple-system, BlinkMacSystemFont, Calibri, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -78,37 +81,6 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 5px;
     &:window-inactive {
       background: rgba(170,170,170,0.4);
-    }
-  }
-  @media print{
-    @page{
-      size: A4 portrait;
-      margin: 0cm;
-    }
-    *{
-      background: transparent !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-    html, body {
-      font-size: 10pt;
-      margin:0;
-      padding:0;
-      display: contents;
-      h2,h3, blockquote { page-break-after: avoid; }
-      p, h2, h3, blockquote{
-        orphans: 3;
-        widows: 3;
-      }
-    }
-    #root, #root > div {
-      display: contents;
-      main {
-        margin: 0;
-        display: grid !important;
-        width: 100%;
-        height: 100%;
-      }
     }
   }
 `;

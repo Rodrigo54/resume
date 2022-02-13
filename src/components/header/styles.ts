@@ -16,7 +16,8 @@ export const Name = styled.h1`
 export const Resume = styled.p`
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.1;
   text-align: justify;
-  hyphens: auto;
+  text-indent: 0.5rem;
+  hyphens: none;
 `;

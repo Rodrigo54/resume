@@ -1,4 +1,5 @@
 import Title from '@components/title';
+import Blockquote from '@components/blockquote';
 import { CalendarAlt as Calendar } from '@styled-icons/fa-regular/CalendarAlt';
 import { University } from '@styled-icons/fa-solid/University';
 import { UserGraduate } from '@styled-icons/fa-solid/UserGraduate';
@@ -22,11 +23,6 @@ const AcademicFormation: React.FC = () => {
     }
   }
 
-  function numberFormat(number: number) {
-    const stringNumber = Intl.NumberFormat("pt-BR").format(number);
-    return <span>{stringNumber} Horas/Aulas</span>;
-  }
-
   return (
     <S.ContentWrapper>
       <Title>Formação Acadêmica</Title>
@@ -48,7 +44,7 @@ const AcademicFormation: React.FC = () => {
                   {dateFormat(work.duration.end)}
                 </S.InfoDate>
               </S.InfoWrap>
-              <S.Description>{work.description}</S.Description>
+              <Blockquote>{work.description}</Blockquote>
             </S.FormationWrap>
           );
         })}

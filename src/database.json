@@ -1,15 +1,24 @@
 {
   "fullName": "Rodrigo Alves Mesquita",
   "resume": "Detenho as principais características: liderança, motivação, determinação, criatividade, fácil comunicação e interação no ambiente profissional.",
-  "address": "Av Neiva Moreira, N° 300, Condomínio Grand Park Árvores Calhau – São Luís/MA, 65071-383",
+  "address": {
+    "street": "Av Neiva Moreira",
+    "streetNumber": "300",
+    "neighborhood": "Calhau",
+    "complement": "Condomínio Grand Park Árvores",
+    "city": "São Luís",
+    "zipCode": "65071-383",
+    "state": "Maranhão",
+    "country": "Brasil"
+  },
   "phone": "+55 98 98740-6885",
   "email": "rodrigo54mix@gmail.com",
-  "languages": ["Inglês Básico"],
+  "languages": ["Inglês Básico", "Português Fluente"],
   "links": [
     "https://rodrigoalves.dev/",
     "https://github.com/rodrigo54",
     "https://br.linkedin.com/in/rodrigo54",
-    "http://fb.me/rodrigo54"
+    "https://fb.me/rodrigo54"
   ],
   "skills": {
     "frontend": [
@@ -32,7 +41,14 @@
       "SQL",
       "PHP"
     ],
-    "tools": ["Git", "Flow", "vscode", "Adroid Studio", "Xcode", "Photoshop"]
+    "tools": [
+      "Git",
+      "Flow",
+      "vscode",
+      "Android Studio",
+      "Xcode",
+      "Photoshop"
+    ]
   },
   "jobs": [
     {

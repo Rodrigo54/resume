@@ -17,15 +17,19 @@ export const PaperContainer = styled.main`
   box-shadow: 2px 2px 5px #a2a2a2;
 
   display: grid;
-  grid-template: auto / 1fr 0.4fr;
+  grid-template: auto / 1fr 0.5fr;
   gap: 30px;
 `;
 
 export const PaperArticle = styled.article`
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
 `;
 
 export const PaperAside = styled.aside`
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
 `;
 

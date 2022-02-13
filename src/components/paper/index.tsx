@@ -2,6 +2,8 @@ import Contact from '@components/contact';
 import HeaderResume from '@components/header';
 import AcademicFormation from '@components/formation';
 import Courses from '@components/courses';
+import Languages from '@components/langs';
+import Links from '@components/links';
 import Skills from '@components/skills';
 import ProfessionalExperience from '@components/professional-experience';
 
@@ -20,6 +22,8 @@ const Paper: React.FC = () => {
           <Contact />
           <Skills />
           <Courses />
+          <Languages />
+          <Links />
         </S.PaperAside>
       </S.PaperContainer>
     </S.PaperWrapper>
