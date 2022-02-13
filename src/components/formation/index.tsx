@@ -1,20 +1,21 @@
-import React from 'react';
-import * as S from './styles';
+import Title from '@components/title';
+import Blockquote from '@components/blockquote';
 import { CalendarAlt as Calendar } from '@styled-icons/fa-regular/CalendarAlt';
 import { University } from '@styled-icons/fa-solid/University';
-import { GraduationCap } from '@styled-icons/fa-solid/GraduationCap';
 import { UserGraduate } from '@styled-icons/fa-solid/UserGraduate';
-import { OndemandVideo } from '@styled-icons/material-rounded/OndemandVideo';
-import { Formation, Courses } from '@model/formation';
+import { formation } from 'database.json';
 import { capitalize } from 'lodash';
+import React from 'react';
+
+import * as S from './styles';
 
 const AcademicFormation: React.FC = () => {
   function dateFormat(date?: string) {
     if (date) {
       const dateObj = new Date(date);
-      const stringDate = Intl.DateTimeFormat('pt-BR', {
-        year: 'numeric',
-        month: 'long',
+      const stringDate = Intl.DateTimeFormat("pt-BR", {
+        year: "numeric",
+        month: "long",
       }).format(dateObj);
       return <time dateTime={date}>{capitalize(stringDate)}</time>;
     } else {
@@ -22,77 +23,32 @@ const AcademicFormation: React.FC = () => {
     }
   }
 
-  function numberFormat(number: number) {
-    const stringNumber = Intl.NumberFormat('pt-BR').format(number);
-    return <span>{stringNumber} Horas/Aulas</span>;
-  }
-
   return (
-    <>
-      <S.ContentWrapper>
-        <S.Title>Formação Acadêmica</S.Title>
-        {Formation.sort((a, b) =>
-          b.duration.init.localeCompare(a.duration.init)
-        ).map((work, index) => {
+    <S.ContentWrapper>
+      <Title>Formação Acadêmica</Title>
+      {formation
+        .sort((a, b) => b.duration.init.localeCompare(a.duration.init))
+        .map((work, index) => {
           return (
             <S.FormationWrap key={index}>
               <S.InfoWrap>
                 <S.InfoName>
-                  <UserGraduate size={20} /> {work.name}
+                  <UserGraduate size={12} /> {work.name}
                 </S.InfoName>
                 <S.InfoLocale>
-                  <University size={20} /> {work.locale}
+                  <University size={12} /> {work.locale}
                 </S.InfoLocale>
                 <S.InfoDate>
-                  <Calendar size={20} />
+                  <Calendar size={12} />
                   {dateFormat(work.duration.init)} -
                   {dateFormat(work.duration.end)}
                 </S.InfoDate>
               </S.InfoWrap>
-              <S.Description>{work.description}</S.Description>
+              <Blockquote>{work.description}</Blockquote>
             </S.FormationWrap>
           );
         })}
-      </S.ContentWrapper>
-
-      <S.ContentWrapper>
-        <S.Title>Cursos</S.Title>
-        {Courses.sort((a, b) => b.year.localeCompare(a.year)).map(
-          (course, index) => {
-            return (
-              <S.CourseWrap
-                key={index}
-                href={course.link}
-                title={course.name}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <S.InfoWrap>
-                  <S.InfoName>
-                    {course.online ? (
-                      <OndemandVideo size={30} />
-                    ) : (
-                      <GraduationCap size={30} />
-                    )}
-                    {course.name}
-                  </S.InfoName>
-                  <S.InfoLocale>
-                    <span>{course.locale}</span> -
-                    <span>
-                      Ano: <time>{course.year}</time>
-                    </span>
-                  </S.InfoLocale>
-                  <S.InfoDate>
-                    {numberFormat(course.duration)}{' '}
-                    {course.online ? '( Online )' : '( Presencial )'}
-                  </S.InfoDate>
-                </S.InfoWrap>
-              </S.CourseWrap>
-            );
-          }
-        )}
-      </S.ContentWrapper>
-    </>
+    </S.ContentWrapper>
   );
 };
 
