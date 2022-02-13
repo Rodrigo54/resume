@@ -1,7 +1,16 @@
 {
   "name": "resume",
+  "description": "Curriculum of Rodrigo Alves Mesquita",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/Rodrigo54/resume"
+  },
+  "author": {
+    "name": "Rodrigo Alves Mesquita",
+    "url": "https://rodrigoalves.dev",
+    "email": "rodrigo54mix@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
