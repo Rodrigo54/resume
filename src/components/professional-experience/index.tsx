@@ -29,13 +29,13 @@ const ProfessionalExperience: React.FC = () => {
             <S.WorkWrap key={index}>
               <S.InfoWrap>
                 <S.InfoName>
-                  <Work color='rgba(0,0,0,0.6)' size={16} /> {item.job}
+                  <Work size={12} /> {item.job}
                 </S.InfoName>
                 <S.InfoLocale>
-                  <HomeWork color='rgba(0,0,0,0.6)' size={16} /> {item.locale}
+                  <HomeWork size={12} /> {item.locale}
                 </S.InfoLocale>
                 <S.InfoDate>
-                  <Calendar color='rgba(0,0,0,0.6)' size={16} />
+                  <Calendar size={12} />
                   {dateFormat(item.duration.init)} -
                   {dateFormat(item.duration.end)}
                 </S.InfoDate>

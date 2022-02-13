@@ -9,7 +9,7 @@ export const PaperWrapper = styled.div`
 `;
 
 export const PaperContainer = styled.main`
-  padding: 30px;
+  padding: 40px;
   margin: 5rem auto;
   width: 85vw;
   max-width: 900px;

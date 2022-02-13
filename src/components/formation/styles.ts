@@ -6,41 +6,25 @@ export const ContentWrapper = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-family: var(--font-serif);
-  color: var(--color2-contrast);
+  font-family: var(--font-title);
+  color: var(--color3);
   word-break: break-word;
   letter-spacing: 0.05rem;
-  line-height: 1.7;
-  font-weight: 400;
-  font-size: 1.7rem;
-  margin: 2rem auto 1.4rem;
-  ${media.lessThan('large')`
-    font-size: 1.375rem;
-  `}
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0.5rem auto;
 `;
 
 export const FormationWrap = styled.section`
   display: flex;
   flex-flow: column nowrap;
-  margin-bottom: 15px;
-`;
-
-export const CourseWrap = styled.a`
-  display: flex;
-  flex-flow: column nowrap;
-  margin-bottom: 40px;
-  color: var(--color2-contrast);
-  text-decoration: none;
-  &:hover {
-    color: var(--color3-light);
-  }
+  margin-bottom: 5px;
 `;
 
 export const InfoWrap = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px;
-  padding: 0px 0px 0px 20px;
+  gap: 5px;
 `;
 
 export const InfoName = styled.h3`
@@ -49,10 +33,10 @@ export const InfoName = styled.h3`
   align-items: center;
   gap: 10px;
 
-  font-family: var(--font-serif);
+  font-family: var(--font-title);
   line-height: 1;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 `;
 
 export const InfoLocale = styled.p`
@@ -61,6 +45,7 @@ export const InfoLocale = styled.p`
   align-items: center;
   gap: 10px;
 
+  font-family: var(--font-body);
   line-height: 1;
   font-weight: 200;
   font-size: 1rem;
@@ -72,6 +57,7 @@ export const InfoDate = styled.p`
   align-items: center;
   gap: 10px;
 
+  font-family: var(--font-body);
   line-height: 1;
   font-weight: 200;
   font-size: 1rem;
@@ -80,12 +66,14 @@ export const InfoDate = styled.p`
 export const Description = styled.blockquote`
   border-left: 0.3rem solid var(--color3-light);
   padding: 0px 15px;
-  margin: 30px 27px;
+  margin: 10px 4px;
 
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-body);
   line-height: 1.5;
   font-weight: 200;
   font-size: 1rem;
   font-style: italic;
-  letter-spacing: 1px;
+  text-align: justify;
+  hyphens: auto;
+  text-indent: 0.8rem;
 `;
