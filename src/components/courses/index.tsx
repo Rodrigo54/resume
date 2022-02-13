@@ -1,12 +1,9 @@
-import React from "react";
-import * as S from "./styles";
-import { CalendarAlt as Calendar } from "@styled-icons/fa-regular/CalendarAlt";
-import { University } from "@styled-icons/fa-solid/University";
-import { GraduationCap } from "@styled-icons/fa-solid/GraduationCap";
-import { UserGraduate } from "@styled-icons/fa-solid/UserGraduate";
-import { OndemandVideo } from "@styled-icons/material-rounded/OndemandVideo";
-import { formation, courses } from "database.json";
-import { capitalize } from "lodash";
+import { courses } from 'database.json';
+import { capitalize } from 'lodash';
+import React from 'react';
+import Title from '@components/title';
+
+import * as S from './styles';
 
 const Courses: React.FC = () => {
   function dateFormat(date?: string) {
@@ -29,7 +26,7 @@ const Courses: React.FC = () => {
 
   return (
     <S.ContentWrapper>
-      <S.Title>Cursos</S.Title>
+      <Title>Cursos</Title>
       {courses
         .sort((a, b) => b.year.localeCompare(a.year))
         .map((course, index) => {

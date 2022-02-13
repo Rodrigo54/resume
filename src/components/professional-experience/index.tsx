@@ -5,6 +5,7 @@ import { HomeWork } from '@styled-icons/material-rounded/HomeWork';
 import { Work } from '@styled-icons/material/Work';
 import { jobs } from 'database.json';
 import { capitalize } from 'lodash';
+import Title from '@components/title';
 
 const ProfessionalExperience: React.FC = () => {
   function dateFormat(date?: string) {
@@ -22,7 +23,7 @@ const ProfessionalExperience: React.FC = () => {
 
   return (
     <S.ContentWrapper>
-      <S.Title>Experiências Profissionais</S.Title>
+      <Title>Experiências Profissionais</Title>
       {jobs.sort((a, b) => b.duration.init.localeCompare(a.duration.init)).slice(0, 4).map(
         (item, index) => {
           return (

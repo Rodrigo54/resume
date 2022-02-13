@@ -1,18 +1,7 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 export const ContentWrapper = styled.section`
-  font-family: var(--font-sans-serif);
-`;
-
-export const Title = styled.h2`
-  font-family: var(--font-title);
-  color: var(--color3);
-  word-break: break-word;
-  letter-spacing: 0.05rem;
-  font-weight: 800;
-  font-size: 1.5rem;
-  margin: 0.5rem auto;
+  font-family: var(--font-body);
 `;
 
 export const WorkWrap = styled.section`

@@ -1,3 +1,4 @@
+import Title from '@components/title';
 import { CalendarAlt as Calendar } from '@styled-icons/fa-regular/CalendarAlt';
 import { University } from '@styled-icons/fa-solid/University';
 import { UserGraduate } from '@styled-icons/fa-solid/UserGraduate';
@@ -28,7 +29,7 @@ const AcademicFormation: React.FC = () => {
 
   return (
     <S.ContentWrapper>
-      <S.Title>Formação Acadêmica</S.Title>
+      <Title>Formação Acadêmica</Title>
       {formation
         .sort((a, b) => b.duration.init.localeCompare(a.duration.init))
         .map((work, index) => {

@@ -4,9 +4,34 @@
   "address": "Av Neiva Moreira, N° 300, Condomínio Grand Park Árvores Calhau – São Luís/MA, 65071-383",
   "phone": "+55 98 98740-6885",
   "email": "rodrigo54mix@gmail.com",
+  "languages": ["Inglês Básico"],
+  "links": [
+    "https://rodrigoalves.dev/",
+    "https://github.com/rodrigo54",
+    "https://br.linkedin.com/in/rodrigo54",
+    "http://fb.me/rodrigo54"
+  ],
   "skills": {
-    "frontend": ["Javascript", "Typescript", "SASS", "Angular", "Ionic", "React", "styled-components", "Jest", "Jasmine"],
-    "backend": ["Nodejs", "Nextjs", "Nestjs", "ExpressJs", "GraphQL", "SQL", "PHP"],
+    "frontend": [
+      "Javascript",
+      "Typescript",
+      "SASS",
+      "Angular",
+      "Ionic",
+      "React",
+      "styled-components",
+      "Jest",
+      "Jasmine"
+    ],
+    "backend": [
+      "Nodejs",
+      "Nextjs",
+      "Nestjs",
+      "ExpressJs",
+      "GraphQL",
+      "SQL",
+      "PHP"
+    ],
     "tools": ["Git", "Flow", "vscode", "Adroid Studio", "Xcode", "Photoshop"]
   },
   "jobs": [
