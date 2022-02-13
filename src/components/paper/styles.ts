@@ -13,7 +13,19 @@ export const PaperContainer = styled.main`
   margin: 5rem auto;
   width: 85vw;
   max-width: 900px;
-  height: 30cm;
   background: white;
   box-shadow: 2px 2px 5px #a2a2a2;
+
+  display: grid;
+  grid-template: auto / 1fr 0.4fr;
+  gap: 30px;
 `;
+
+export const PaperArticle = styled.article`
+  display: block;
+`;
+
+export const PaperAside = styled.aside`
+  display: block;
+`;
+
