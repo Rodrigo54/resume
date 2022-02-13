@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './app';
+import ReactApp from './app';
 import GlobalStyles from '@styles/global';
+import ThemeStyles from '@styles/theme';
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <ThemeStyles />
+    <ReactApp />
   </React.StrictMode>,
   document.getElementById('root')
 )
