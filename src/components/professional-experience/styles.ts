@@ -54,3 +54,15 @@ export const InfoDate = styled.p`
   font-weight: 200;
   font-size: 1rem;
 `;
+
+export const InfoFooter = styled.p`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-body);
+  line-height: 1;
+  font-weight: 200;
+  font-size: 1rem;
+`;
