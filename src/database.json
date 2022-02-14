@@ -104,6 +104,14 @@
         "end": "2021-11-01"
       },
       "description": " Desenvolvimento e manutenção de plataformas web em react-dom e Angular assim como do Backend em Nodejs numa arquitetura complexa de microserviços e gateways aplicando os conceitos de UML e metodologias ágeis como o Kanban."
+    },
+    {
+      "job": "Desenvolvedor Frontend",
+      "locale": "Alcis - Softwares para logística ",
+      "duration": {
+        "init": "2021-11-15"
+      },
+      "description": "Desenvolvimento e manutenção de plataformas web e Mobile (Android e iOS) em Angular integrado a backend dotnet e base de dados Oracle e metodologias ágeis (Scrum)."
     }
   ],
   "formation": [
@@ -114,7 +122,7 @@
         "init": "2013-08-01",
         "end": "2017-07-01"
       },
-      "description": "Analisar problemas e projetar soluções criativas que envolvam sistemas computacionais. Avaliação, especificação e desenvolvimento de ferramentas, métodos e sistemas computacionais. Investigação e desenvolvimento de conhecimento teórico na área de computação; análise e modelagem de problemas do ponto de vista computacional; concepção e implementação de sistemas de computação."
+      "description": "Habilitado a analisar problemas e projetar soluções criativas que envolvam softwares. Avaliação, investigação, especificação e desenvolvimento de ferramentas, métodos e sistemas. Análise e modelagem de problemas, concepção e implementação de sistemas de informação."
     },
     {
       "name": "Técnico em Agropecuária",

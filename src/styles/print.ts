@@ -27,6 +27,13 @@ const PrintStyles = createGlobalStyle`
     }
     #root, #root > div {
       display: contents;
+      & > div {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
       main {
         margin: 0;
         padding: 10mm;

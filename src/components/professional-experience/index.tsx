@@ -7,6 +7,7 @@ import { jobs } from "database.json";
 import { capitalize } from "lodash";
 import Title from "@components/title";
 import Blockquote from "@components/blockquote";
+import extenso from 'extenso';
 
 const ProfessionalExperience: React.FC = () => {
   function dateFormat(date?: string) {
@@ -48,6 +49,7 @@ const ProfessionalExperience: React.FC = () => {
             </S.WorkWrap>
           );
         })}
+      <S.InfoFooter>E mais outras {extenso(jobs.length - 4)} experiências profissionais.</S.InfoFooter>
     </S.ContentWrapper>
   );
 };
