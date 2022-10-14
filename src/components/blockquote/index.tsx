@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Blockquote = styled.blockquote`
-  border-left: 0.3rem solid var(--color3-light);
+  border-left: 0.3rem solid var(--color1-light);
   padding: 0px 15px;
   margin: 8px 4px;
 

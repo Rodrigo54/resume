@@ -13,10 +13,10 @@ export const Link = styled.a`
   font-weight: 500;
   line-height: 1.2;
   word-break: keep-all;
-  color: var(--color2-contrast);
+  color: var(--text-color);
   text-decoration: none;
   &:hover {
-    color: var(--color3-light);
+    color: var(--color1-light);
   }
 `;
 

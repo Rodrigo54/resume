@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Title = styled.h2`
   font-family: var(--font-title);
-  color: var(--color3);
+  color: var(--color1);
   word-break: break-word;
   letter-spacing: 0.05rem;
   line-height: 1.3;

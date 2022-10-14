@@ -2,6 +2,28 @@ import { createGlobalStyle } from 'styled-components';
 
 const PrintStyles = createGlobalStyle`
   @media print{
+
+    #root {
+      --color1: #2196f3;
+      --color1-light: #90caf9;
+      --color1-shade: #1e88e5;
+      --color1-contrast: #fff;
+
+      --color2: #fff;
+      --color2-light: #eee;
+      --color2-shade: #eee;
+      --color2-contrast: #1b1b1b;
+
+      --text-color: #0a0a0a;
+      --paper-background: #fff;
+      --paper-shadow: 2px 2px 5px #a2a2a2;
+      --background-gradient: linear-gradient(0deg, #adcce4 0%, #e6e6e6 100%);
+      --background: #adcce4;
+
+      --font-title: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      --font-body: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    }
+
     @page{
       size: A4 portrait;
       margin: 0cm;
