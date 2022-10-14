@@ -11,6 +11,7 @@ export const Name = styled.h1`
   font-weight: 800;
   line-height: 1;
   margin-bottom: 10px;
+  color: var(--color1);
 `;
 
 export const Resume = styled.p`

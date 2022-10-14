@@ -6,8 +6,8 @@ export const PaperWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
-  background: #e6e6e6;
-  background: linear-gradient(0deg, #adcce4 0%, #e6e6e6 100%);
+  background: var(--color1-light);
+  background: var(--background-gradient);
   padding: 5rem 0px;
 `;
 
@@ -35,7 +35,7 @@ export const ActionButton = styled.button`
   border: none;
   border-radius: 50%;
   box-sizing: border-box;
-  color: #1e88e5;
+  color: var(--color1);
   cursor: pointer;
   padding: 0px;
 
@@ -45,7 +45,8 @@ export const ActionButton = styled.button`
   }
 
   &:hover {
-    background-color: rgb(249,250,251);
+    background: var(--color1-shade);
+    color: var(--color1-contrast);
   }
 `;
 
@@ -54,8 +55,8 @@ export const PaperContainer = styled.main`
   margin: 0px;
   width: 85vw;
   max-width: 900px;
-  background: white;
-  box-shadow: 2px 2px 5px #a2a2a2;
+  background: var(--paper-background);
+  box-shadow: var(--paper-shadow);
 
   display: grid;
   grid-template: auto / 1fr 0.5fr;

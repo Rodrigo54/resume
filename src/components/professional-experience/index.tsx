@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import { CalendarAlt as Calendar } from "@styled-icons/fa-regular/CalendarAlt";
+import { CalendarDays as Calendar } from '@styled-icons/fa-regular/CalendarDays';
 import { HomeWork } from "@styled-icons/material-rounded/HomeWork";
 import { Work } from "@styled-icons/material/Work";
 import { jobs } from "database.json";

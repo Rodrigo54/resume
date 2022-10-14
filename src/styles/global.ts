@@ -65,6 +65,10 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  #root {
+    color: var(--text-color);
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
   }

@@ -1,7 +1,7 @@
 import Title from '@components/title';
 import Blockquote from '@components/blockquote';
-import { CalendarAlt as Calendar } from '@styled-icons/fa-regular/CalendarAlt';
-import { University } from '@styled-icons/fa-solid/University';
+import { CalendarDays as Calendar } from '@styled-icons/fa-regular/CalendarDays';
+import { BuildingColumns as University } from '@styled-icons/fa-solid/BuildingColumns';
 import { UserGraduate } from '@styled-icons/fa-solid/UserGraduate';
 import { formation } from 'database.json';
 import { capitalize } from 'lodash';

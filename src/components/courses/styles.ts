@@ -14,10 +14,10 @@ export const ListWrapper = styled.section`
 export const CourseWrap = styled.a`
   display: flex;
   flex-flow: column nowrap;
-  color: var(--color2-contrast);
+  color: var(--text-color);
   text-decoration: none;
   &:hover {
-    color: var(--color3-light);
+    color: var(--color1-light);
   }
 `;
 
