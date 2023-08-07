@@ -116,8 +116,9 @@
   ],
   "formation": [
     {
-      "name": "Bacharel em Ciências da Computação",
+      "name": "Ciências da Computação",
       "locale": "Faculdade Pitágoras de São Luis",
+      "level": "Superior",
       "duration": {
         "init": "2013-08-01",
         "end": "2017-07-01"
@@ -127,6 +128,7 @@
     {
       "name": "Técnico em Agropecuária",
       "locale": "Instituto Federal de Ciências e Tecnologia do Maranhão (IFMA)",
+      "level": "Ensino Médio",
       "duration": {
         "init": "2009-01-01",
         "end": "2011-12-01"
