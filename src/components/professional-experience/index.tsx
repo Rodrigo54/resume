@@ -8,15 +8,15 @@ import { capitalize } from "lodash";
 import Title from "@components/title";
 import Blockquote from "@components/blockquote";
 import extenso from 'extenso';
+import { format, parse } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import DateFormat from '@components/date-format';
 
 const ProfessionalExperience: React.FC = () => {
   function dateFormat(date?: string) {
     if (date) {
-      const dateObj = new Date(date);
-      const stringDate = Intl.DateTimeFormat("pt-BR", {
-        year: "numeric",
-        month: "long",
-      }).format(dateObj);
+      const dateObj = parse(date, 'yyyy-MM-dd', new Date());
+      const stringDate = format(dateObj, `MMMM 'de' yyyy`, { locale: ptBR });
       return <time dateTime={date}>{capitalize(stringDate)}</time>;
     } else {
       return <span>Até o momento</span>;
@@ -38,8 +38,8 @@ const ProfessionalExperience: React.FC = () => {
                 </S.InfoName>
                 <S.InfoDate>
                   <Calendar size={12} />
-                  {dateFormat(item.duration.init)} -
-                  {dateFormat(item.duration.end)}
+                  <DateFormat date={item.duration.init} /> -
+                  <DateFormat date={item.duration.end} />
                 </S.InfoDate>
                 <S.InfoLocale>
                   <HomeWork size={12} /> {item.locale}
