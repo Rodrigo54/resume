@@ -84,7 +84,7 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: inset 0 0 6px rgba(170,170,170,0.5);
     border-radius: 5px;
     &:window-inactive {
-      background: rgba(170,170,170,0.4);
+      background-color: rgba(170,170,170,0.4);
     }
   }
 `;

@@ -8,15 +8,15 @@ import { capitalize } from "lodash";
 import Title from "@components/title";
 import Blockquote from "@components/blockquote";
 import extenso from 'extenso';
+import { format, parse } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import DateFormat from '@components/date-format';
 
 const ProfessionalExperience: React.FC = () => {
   function dateFormat(date?: string) {
     if (date) {
-      const dateObj = new Date(date);
-      const stringDate = Intl.DateTimeFormat("pt-BR", {
-        year: "numeric",
-        month: "long",
-      }).format(dateObj);
+      const dateObj = parse(date, 'yyyy-MM-dd', new Date());
+      const stringDate = format(dateObj, `MMMM 'de' yyyy`, { locale: ptBR });
       return <time dateTime={date}>{capitalize(stringDate)}</time>;
     } else {
       return <span>Até o momento</span>;
@@ -28,28 +28,29 @@ const ProfessionalExperience: React.FC = () => {
       <Title>Experiências Profissionais</Title>
       {jobs
         .sort((a, b) => b.duration.init.localeCompare(a.duration.init))
-        .slice(0, 4)
+        .slice(0, 3)
         .map((item, index) => {
           return (
             <S.WorkWrap key={index}>
               <S.InfoWrap>
                 <S.InfoName>
-                  <Work size={12} /> {item.job}
+                  <HomeWork size={12} /> {item.locale}
                 </S.InfoName>
+                <S.InfoLocale>
+                  <Work size={12} /> {item.position}
+                </S.InfoLocale>
                 <S.InfoDate>
                   <Calendar size={12} />
-                  {dateFormat(item.duration.init)} -
-                  {dateFormat(item.duration.end)}
+                  <DateFormat date={item.duration.init} /> -
+                  <DateFormat date={item.duration.end} />
                 </S.InfoDate>
-                <S.InfoLocale>
-                  <HomeWork size={12} /> {item.locale}
-                </S.InfoLocale>
               </S.InfoWrap>
               <Blockquote>{item.description}</Blockquote>
             </S.WorkWrap>
           );
         })}
-      <S.InfoFooter>E mais outras {extenso(jobs.length - 4)} experiências profissionais.</S.InfoFooter>
+      <S.InfoFooter>E mais outras {extenso(jobs.length - 3)} experiências profissionais.</S.InfoFooter>
+      <S.InfoFooter>Veja no Linkedin todas as experiências profissionais.</S.InfoFooter>
     </S.ContentWrapper>
   );
 };
