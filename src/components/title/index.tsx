@@ -4,11 +4,11 @@ const Title = styled.h2`
   font-family: var(--font-title);
   color: var(--color1);
   word-break: break-word;
-  letter-spacing: 0.05rem;
-  line-height: 1.3;
+  letter-spacing: 0.01rem;
+  line-height: 1;
   font-weight: 800;
   font-size: 1.3rem;
-  margin: 0.3rem 0px;
+  margin: 7px 0px;
 `;
 
 export default Title;

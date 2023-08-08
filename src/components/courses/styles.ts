@@ -34,8 +34,8 @@ export const InfoName = styled.h3`
   gap: 10px;
 
   font-family: var(--font-title);
-  line-height: 1;
-  font-weight: 500;
+  line-height: 1.2;
+  font-weight: 400;
   font-size: 1rem;
 `;
 
@@ -47,7 +47,7 @@ export const InfoLocale = styled.p`
 
   font-family: var(--font-body);
   line-height: 1;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1rem;
   text-align: left;
 `;

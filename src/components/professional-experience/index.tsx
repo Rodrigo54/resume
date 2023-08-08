@@ -28,28 +28,29 @@ const ProfessionalExperience: React.FC = () => {
       <Title>Experiências Profissionais</Title>
       {jobs
         .sort((a, b) => b.duration.init.localeCompare(a.duration.init))
-        .slice(0, 4)
+        .slice(0, 3)
         .map((item, index) => {
           return (
             <S.WorkWrap key={index}>
               <S.InfoWrap>
                 <S.InfoName>
-                  <Work size={12} /> {item.job}
+                  <HomeWork size={12} /> {item.locale}
                 </S.InfoName>
+                <S.InfoLocale>
+                  <Work size={12} /> {item.position}
+                </S.InfoLocale>
                 <S.InfoDate>
                   <Calendar size={12} />
                   <DateFormat date={item.duration.init} /> -
                   <DateFormat date={item.duration.end} />
                 </S.InfoDate>
-                <S.InfoLocale>
-                  <HomeWork size={12} /> {item.locale}
-                </S.InfoLocale>
               </S.InfoWrap>
               <Blockquote>{item.description}</Blockquote>
             </S.WorkWrap>
           );
         })}
-      <S.InfoFooter>E mais outras {extenso(jobs.length - 4)} experiências profissionais.</S.InfoFooter>
+      <S.InfoFooter>E mais outras {extenso(jobs.length - 3)} experiências profissionais.</S.InfoFooter>
+      <S.InfoFooter>Veja no Linkedin todas as experiências profissionais.</S.InfoFooter>
     </S.ContentWrapper>
   );
 };

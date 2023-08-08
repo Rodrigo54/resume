@@ -13,7 +13,7 @@ export const Blockquote = styled.blockquote`
   text-align: justify;
   white-space: normal;
   hyphens: auto;
-  text-indent: 0.8rem;
+  text-indent: 1rem;
 `;
 
 export default Blockquote;

@@ -5,7 +5,7 @@ export const ContentWrapper = styled.section`
 `;
 
 export const SkillItem = styled.p`
-  line-height: 1.5;
+  line-height: 1.3;
   margin: 0.3rem auto;
   font-size: 1rem;
 `;
