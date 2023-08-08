@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContactWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px;
+  gap: 5px;
 `;
 
 export const Address = styled.address`

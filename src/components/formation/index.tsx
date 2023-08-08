@@ -4,24 +4,14 @@ import { CalendarDays as Calendar } from '@styled-icons/fa-regular/CalendarDays'
 import { BuildingColumns as University } from '@styled-icons/fa-solid/BuildingColumns';
 import { UserGraduate } from '@styled-icons/fa-solid/UserGraduate';
 import { formation } from 'database.json';
-import { capitalize } from 'lodash';
+import DateFormat from '@components/date-format';
 import React from 'react';
 
 import * as S from './styles';
 
+
 const AcademicFormation: React.FC = () => {
-  function dateFormat(date?: string) {
-    if (date) {
-      const dateObj = new Date(date);
-      const stringDate = Intl.DateTimeFormat("pt-BR", {
-        year: "numeric",
-        month: "long",
-      }).format(dateObj);
-      return <time dateTime={date}>{capitalize(stringDate)}</time>;
-    } else {
-      return <span>Até o momento</span>;
-    }
-  }
+
 
   return (
     <S.ContentWrapper>
@@ -33,15 +23,17 @@ const AcademicFormation: React.FC = () => {
             <S.FormationWrap key={index}>
               <S.InfoWrap>
                 <S.InfoName>
-                  <UserGraduate size={12} /> {work.name}
+                  <UserGraduate size={12} />
+                  <span>{work.name}</span>
+                  <S.InfoChip>{work.level}</S.InfoChip>
                 </S.InfoName>
                 <S.InfoLocale>
                   <University size={12} /> {work.locale}
                 </S.InfoLocale>
                 <S.InfoDate>
                   <Calendar size={12} />
-                  {dateFormat(work.duration.init)} -
-                  {dateFormat(work.duration.end)}
+                  <DateFormat date={work.duration.init} /> -
+                  <DateFormat date={work.duration.end} />
                 </S.InfoDate>
               </S.InfoWrap>
               <Blockquote>{work.description}</Blockquote>

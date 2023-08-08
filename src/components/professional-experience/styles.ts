@@ -28,7 +28,7 @@ export const InfoName = styled.h3`
   color: var(--text-color);
   line-height: 1;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 
 export const InfoLocale = styled.p`

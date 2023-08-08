@@ -27,7 +27,7 @@ export const InfoName = styled.h3`
   font-family: var(--font-title);
   line-height: 1;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 
 export const InfoLocale = styled.p`
@@ -54,3 +54,10 @@ export const InfoDate = styled.p`
   font-size: 1rem;
 `;
 
+export const InfoChip = styled.span`
+  font-size: 0.9rem;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--color1-light), white 60%) ;
+  color: var(--color1-shade);
+  padding: 5px;
+`;

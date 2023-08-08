@@ -2,7 +2,7 @@
   "name": "resume",
   "description": "Curriculum of Rodrigo Alves Mesquita",
   "private": true,
-  "version": "1.3.0",
+  "version": "1.4.0",
   "repository": {
     "url": "https://github.com/Rodrigo54/resume"
   },
@@ -17,6 +17,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "extenso": "^2.0.1",
     "lodash": "^4.17.21",
     "polished": "^4.2.2",

@@ -18,8 +18,8 @@ const ThemeStyles = createGlobalStyle`
     --background-gradient: linear-gradient(0deg, #adcce4 0%, #e6e6e6 100%);
     --background: #adcce4;
 
-    --font-title: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    --font-body: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    --font-title: 'Roboto Slab', serif;
+    --font-body:  'Noto Sans', sans-serif;
   }
 
 
@@ -60,9 +60,6 @@ const ThemeStyles = createGlobalStyle`
     --paper-shadow: 2px 2px 5px #a2a2a2;
     --background-gradient: linear-gradient(0deg, #adcce4 0%, #e6e6e6 100%);
     --background: #adcce4;
-
-    --font-title: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    --font-body: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   }
 
 
