@@ -6,9 +6,9 @@ const Links: React.FC = () => {
   return (
     <S.ContentWrapper>
       <Title>Links</Title>
-      {links.map((link, index) => (
+      {links.map((link) => (
         <S.Link
-          key={index}
+          key={link}
           href={`${link}`}
           target="_blank"
           rel="noopener noreferrer"
