@@ -6,8 +6,8 @@ const Languages: React.FC = () => {
   return (
     <S.ContentWrapper>
       <Title>Idiomas</Title>
-      {languages.map((lang, index) => (
-        <S.Item key={index}>{lang}</S.Item>
+      {languages.map((lang) => (
+        <S.Item key={lang}>{lang}</S.Item>
       ))}
     </S.ContentWrapper>
   );

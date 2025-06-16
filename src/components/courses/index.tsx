@@ -1,5 +1,4 @@
 import { courses } from "database.json";
-import { capitalize } from "lodash";
 import React from "react";
 import Title from "@components/title";
 
@@ -16,11 +15,11 @@ const Courses: React.FC = () => {
       <Title>Cursos</Title>
       <S.ListWrapper>
         {courses
-          .sort((a, b) => b.year.localeCompare(a.year))
-          .map((course, index) => {
+          .toSorted((a, b) => b.year.localeCompare(a.year))
+          .map((course) => {
             return (
               <S.CourseWrap
-                key={index}
+                key={course.name}
                 href={course.link}
                 title={course.name}
                 target="_blank"
@@ -33,7 +32,8 @@ const Courses: React.FC = () => {
                     {course.online ? "(Online)" : "(Presencial)"}
                   </S.InfoDate>
                   <S.InfoLocale>
-                    <span>{course.locale}</span> -
+                    <span>{course.locale}</span>
+                    {' - '}
                     <span>
                       Ano: <time>{course.year}</time>
                     </span>

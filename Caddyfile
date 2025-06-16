@@ -1,0 +1,4 @@
+vps.rodrigoalves.dev {
+  root * /var/www/resume
+  file_server
+}

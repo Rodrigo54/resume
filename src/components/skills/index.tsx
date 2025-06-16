@@ -7,9 +7,9 @@ const Skills: React.FC = () => {
   return (
     <S.ContentWrapper>
       <Title>Habilidades</Title>
-      {Object.entries(skills).map(([item, list], index) => {
+      {Object.entries(skills).map(([item, list]) => {
         return (
-          <S.SkillItem key={index}>
+          <S.SkillItem key={item}>
             <S.SkillName>{capitalize(item)}:</S.SkillName>
             <S.SkillList>{list.join(", ")}</S.SkillList>
           </S.SkillItem>
