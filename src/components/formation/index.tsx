@@ -17,10 +17,10 @@ const AcademicFormation: React.FC = () => {
     <S.ContentWrapper>
       <Title>Formação Acadêmica</Title>
       {formation
-        .sort((a, b) => b.duration.init.localeCompare(a.duration.init))
-        .map((work, index) => {
+        .toSorted((a, b) => b.duration.init.localeCompare(a.duration.init))
+        .map((work) => {
           return (
-            <S.FormationWrap key={index}>
+            <S.FormationWrap key={work.name}>
               <S.InfoWrap>
                 <S.InfoName>
                   <UserGraduate size={12} />
