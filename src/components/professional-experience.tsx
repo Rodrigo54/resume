@@ -1,5 +1,4 @@
 import React from "react";
-import * as S from "./styles";
 import { CalendarDays as Calendar } from '@styled-icons/fa-regular/CalendarDays';
 import { HomeWork } from "@styled-icons/material-rounded/HomeWork";
 import { Work } from "@styled-icons/material/Work";
@@ -10,9 +9,11 @@ import { formatDistance, parse } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import DateFormat from '@components/date-format';
 
+const infoRow = "flex flex-row flex-nowrap items-center gap-[10px] [font-family:var(--font-body)] leading-none font-extralight text-base";
+
 const ProfessionalExperience: React.FC = () => {
   return (
-    <S.ContentWrapper>
+    <section className="[font-family:var(--font-body)] flex flex-col gap-[5px]">
       <Title>Experiências Profissionais</Title>
       {jobs
         .toSorted((a, b) => b.duration.init.localeCompare(a.duration.init))
@@ -23,30 +24,30 @@ const ProfessionalExperience: React.FC = () => {
           const duration = formatDistance(initDate, endDate, { locale: ptBR });
 
           return (
-            <S.WorkWrap key={`${item.locale}-${item.position}`}>
-              <S.InfoWrap>
-                <S.InfoName>
+            <section key={`${item.locale}-${item.position}`} className="flex flex-col">
+              <div className="flex flex-col gap-[5px]">
+                <h3 className="flex flex-row flex-nowrap items-center gap-[10px] [font-family:var(--font-title)] text-[var(--text-color)] leading-none font-medium text-base">
                   <HomeWork size={12} /> {item.locale}
-                </S.InfoName>
-                <S.InfoLocale>
+                </h3>
+                <p className={infoRow}>
                   <Work size={12} /> {item.position}
-                </S.InfoLocale>
-                <S.InfoDate>
+                </p>
+                <p className={infoRow}>
                   <Calendar size={12} />
                   <DateFormat date={item.duration.init} />
                   {' - '}
                   <DateFormat date={item.duration.end} />
                   {' • '}
                   <span>{duration}</span>
-                </S.InfoDate>
-              </S.InfoWrap>
+                </p>
+              </div>
               <Blockquote>{item.description}</Blockquote>
-            </S.WorkWrap>
+            </section>
           );
         })}
-      <S.InfoFooter>E mais outras {jobs.length - 3} experiências profissionais.</S.InfoFooter>
-      <S.InfoFooter>Veja no Linkedin todas as experiências profissionais.</S.InfoFooter>
-    </S.ContentWrapper>
+      <p className={infoRow}>E mais outras {jobs.length - 3} experiências profissionais.</p>
+      <p className={infoRow}>Veja no Linkedin todas as experiências profissionais.</p>
+    </section>
   );
 };
 
