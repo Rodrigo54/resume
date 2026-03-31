@@ -14,7 +14,7 @@ Um bom currículo não é aquele que tem mais informações, mas sim aquele que 
 
 - vite - Bundler para projetos React
 
-## S.T.A.R.T.
+## S.T.A.R.T
 
 A técnica S.T.A.R.T. é uma abordagem para a elaboração de descrições detalhadas de experiências ou projetos específicos em um contexto profissional. Essa técnica é frequentemente utilizada em entrevistas de emprego, avaliações de desempenho ou em situações em que é necessário fornecer exemplos concretos de realizações passadas.
 
@@ -31,7 +31,3 @@ A estrutura S.T.A.R.T. é composta pelos seguintes elementos:
 5. (T)ake away (Lições aprendidas): Finalize descrevendo o principal aprendizado que você obteve com essa experiência. Isso demonstra a capacidade de reflexão sobre as próprias ações e o desenvolvimento contínuo de habilidades.
 
 Ao seguir a estrutura S.T.A.R.T., você pode comunicar de forma clara e concisa suas realizações e contribuições profissionais, permitindo que os entrevistadores ou avaliadores entendam melhor seu desempenho e potencial. É uma técnica eficaz para fornecer exemplos concretos e relevantes do seu trabalho anterior.
-
-
-
-
