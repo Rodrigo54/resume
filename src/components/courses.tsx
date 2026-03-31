@@ -2,8 +2,6 @@ import { courses } from "database.json";
 import React from "react";
 import Title from "@components/title";
 
-import * as S from "./styles";
-
 const Courses: React.FC = () => {
   function numberFormat(number: number) {
     const stringNumber = Intl.NumberFormat("pt-BR").format(number);
@@ -11,39 +9,42 @@ const Courses: React.FC = () => {
   }
 
   return (
-    <S.ContentWrapper>
+    <section className="flex flex-col">
       <Title>Cursos</Title>
-      <S.ListWrapper>
+      <section className="flex flex-col gap-[15px]">
         {courses
           .toSorted((a, b) => b.year.localeCompare(a.year))
           .map((course) => {
             return (
-              <S.CourseWrap
+              <a
                 key={course.name}
                 href={course.link}
                 title={course.name}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex flex-col text-[var(--text-color)] no-underline hover:text-[var(--color1-light)]"
               >
-                <S.InfoWrap>
-                  <S.InfoName>{course.name}</S.InfoName>
-                  <S.InfoDate>
+                <div className="flex flex-col gap-[3px]">
+                  <h3 className="flex flex-row flex-nowrap items-center gap-[10px] [font-family:var(--font-title)] leading-[1.2] font-normal text-base">
+                    {course.name}
+                  </h3>
+                  <p className="flex flex-row flex-nowrap items-center gap-[5px] leading-none font-extralight text-base [font-family:var(--font-body)]">
                     {numberFormat(course.duration)}{" "}
                     {course.online ? "(Online)" : "(Presencial)"}
-                  </S.InfoDate>
-                  <S.InfoLocale>
+                  </p>
+                  <p className="flex flex-row flex-nowrap items-center gap-[5px] [font-family:var(--font-body)] leading-none font-light text-base text-left">
                     <span>{course.locale}</span>
                     {' - '}
                     <span>
                       Ano: <time>{course.year}</time>
                     </span>
-                  </S.InfoLocale>
-                </S.InfoWrap>
-              </S.CourseWrap>
+                  </p>
+                </div>
+              </a>
             );
           })}
-      </S.ListWrapper>
-    </S.ContentWrapper>
+      </section>
+    </section>
   );
 };
 
