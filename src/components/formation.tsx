@@ -7,40 +7,40 @@ import { formation } from 'database.json';
 import DateFormat from '@components/date-format';
 import React from 'react';
 
-import * as S from './styles';
-
-
 const AcademicFormation: React.FC = () => {
-
-
   return (
-    <S.ContentWrapper>
+    <section className="[font-family:var(--font-body)] flex flex-col gap-[5px]">
       <Title>Formação Acadêmica</Title>
       {formation
         .toSorted((a, b) => b.duration.init.localeCompare(a.duration.init))
         .map((work) => {
           return (
-            <S.FormationWrap key={work.name}>
-              <S.InfoWrap>
-                <S.InfoName>
+            <section key={work.name} className="flex flex-col">
+              <div className="flex flex-col gap-[5px]">
+                <h3 className="flex flex-row flex-nowrap items-center gap-[10px] [font-family:var(--font-title)] leading-none font-medium text-base">
                   <UserGraduate size={12} />
                   <span>{work.name}</span>
-                  <S.InfoChip>{work.level}</S.InfoChip>
-                </S.InfoName>
-                <S.InfoLocale>
+                  <span
+                    className="text-[0.9rem] rounded-[5px] text-[var(--color1-shade)] p-[5px]"
+                    style={{ backgroundColor: 'color-mix(in srgb, var(--color1-light), white 60%)' }}
+                  >
+                    {work.level}
+                  </span>
+                </h3>
+                <p className="flex flex-row flex-nowrap items-center gap-[10px] [font-family:var(--font-body)] leading-none font-extralight text-base">
                   <University size={12} /> {work.locale}
-                </S.InfoLocale>
-                <S.InfoDate>
+                </p>
+                <p className="flex flex-row flex-nowrap items-center gap-[10px] [font-family:var(--font-body)] leading-none font-extralight text-base">
                   <Calendar size={12} />
                   <DateFormat date={work.duration.init} /> -
                   <DateFormat date={work.duration.end} />
-                </S.InfoDate>
-              </S.InfoWrap>
+                </p>
+              </div>
               <Blockquote>{work.description}</Blockquote>
-            </S.FormationWrap>
+            </section>
           );
         })}
-    </S.ContentWrapper>
+    </section>
   );
 };
 
