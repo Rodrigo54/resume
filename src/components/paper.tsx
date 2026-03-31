@@ -45,7 +45,7 @@ const Paper: React.FC = () => {
           {isDarkMode ? <DarkMode size={30}/> : <LightMode size={30}/>}
         </button>
       </div>
-      <main className="p-[40px] m-0 w-[85vw] max-w-[900px] bg-[var(--paper-background)] shadow-[var(--paper-shadow)] grid grid-cols-[1fr_0.5fr] gap-[30px]">
+      <main className="p-[40px] m-0 w-[85vw] max-w-[900px] bg-[var(--paper-background)] shadow-[var(--paper-shadow)] grid grid-cols-[1fr_0.5fr] gap-[26px]">
         <article className="flex flex-col gap-[5px]">
           <HeaderResume />
           <ProfessionalExperience />
