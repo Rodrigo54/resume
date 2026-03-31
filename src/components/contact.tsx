@@ -1,10 +1,9 @@
-import * as S from './styles';
 import { address, email, phone } from 'database.json';
 
 const Contact: React.FC = () => {
   return (
-    <S.ContactWrapper>
-      <S.Address>
+    <div className="flex flex-col gap-[5px]">
+      <address className="[font-family:var(--font-body)] text-base">
         <p>
           <span>{address.street}, </span>
           <span>N° {address.streetNumber}</span>
@@ -22,10 +21,14 @@ const Contact: React.FC = () => {
           <span>CEP: </span>
           <span>{address.zipCode}</span>
         </p>
-      </S.Address>
-      <S.Phone href={`tel:${phone}`}>{ phone }</S.Phone>
-      <S.Email href={`mailto:${email}`}>{ email }</S.Email>
-    </S.ContactWrapper>
+      </address>
+      <a href={`tel:${phone}`} className="no-underline text-inherit [font-family:var(--font-body)] text-base font-extrabold leading-none">
+        {phone}
+      </a>
+      <a href={`mailto:${email}`} className="no-underline text-inherit [font-family:var(--font-body)] text-base font-extrabold leading-none">
+        {email}
+      </a>
+    </div>
   );
 }
 
