@@ -1,15 +1,16 @@
-import * as S from "./styles";
 import { languages } from "database.json";
 import Title from "@components/title";
 
 const Languages: React.FC = () => {
   return (
-    <S.ContentWrapper>
+    <section className="[font-family:var(--font-body)]">
       <Title>Idiomas</Title>
       {languages.map((lang) => (
-        <S.Item key={lang}>{lang}</S.Item>
+        <p key={lang} className="[font-family:var(--font-body)] text-base font-medium">
+          {lang}
+        </p>
       ))}
-    </S.ContentWrapper>
+    </section>
   );
 };
 
